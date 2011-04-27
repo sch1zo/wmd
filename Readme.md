@@ -14,20 +14,20 @@ Example using wmd with jQuery:
 
     <html>
         <head>
-            <title>WMD Example using jquery</title>
+            <title>WMD Example using jQuery</title>
             <link rel="stylesheet" type="text/css" href="wmd.css"/>
 
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
             <script type="text/javascript" src="jquery.wmd.min.js"></script>
         </head>
         <body>
-            <h1>WMD Example using jquery</h1>
+            <h1>WMD Example using jQuery</h1>
             <div>
                 <textarea id="notes"/>
             </div>
     
             <script type="text/javascript">
-                $().ready(function() {
+                $(function() {
                    $("#notes").wmd(); 
                 });
             </script>
