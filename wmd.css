@@ -10,29 +10,85 @@
 }
 
 .wmd-button-bar {
-	width: 680px;
+	width: 660px;
 	background-color: #fff;
 	padding: 5px 10px;
 }
 
 .wmd-input { 
-	height: 300px;
+	height: 200px;
 	width: 680px;
 	background-color: #fff;
 	border: 0; margin: 0;
 	margin-top: 1px;
-	padding: 10px;
+	padding: 15px;
 	font-size: 16px;
 	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.wmd-input:focus {
+	outline: none;
+}
 
 .wmd-preview { 
-	width: 680px;
+	width: 650px;
 	background-color: #fff;
 	color: #000;
-	padding: 10px;
+	padding: 0 15px;
 	margin-top: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	overflow: auto;
 }
+
+.wmd-preview p, .wmd-preview h1, .wmd-preview h2, 
+.wmd-preview ul, .wmd-preview ol, .wmd-preview blockquote, 
+.wmd-preview hr, .wmd-preview pre {
+	margin: 1em 0;
+}
+
+.wmd-preview pre {
+	overflow-x: auto;
+}
+.wmd-preview code {
+	background: #eee;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: Courier;
+	font-size: 14px;
+}
+.wmd-preview pre code {
+	display: block;
+	padding: 10px 15px;
+	background: #eee;
+}
+.wmd-preview ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+.wmd-preview ol {
+	list-style: decimal;
+	padding-left: 20px;
+}
+.wmd-preview h1 {
+	font-weight: bold;
+	font-size: 21px;
+}
+.wmd-preview h2 {
+	font-weight: bold;
+	font-size: 16px;
+}
+.wmd-preview a {
+	text-decoration: underline;
+	color: #009;
+}
+.wmd-preview blockquote {
+	margin: 1em 3em;
+	color: #999;
+	border-left: 2px solid #999;
+	padding-left: 1em;
+}
+.wmd-preview strong { font-weight: bold; }
+.wmd-preview em { font-style: italic; }
 
 .wmd-output { 
 	background-color: #fff;
@@ -55,7 +111,7 @@
 	margin-right: 5px;
 
 	position: absolute;
-	background-image: url("/images/wmd-buttons.png");
+	background-image: url("images/wmd-buttons.png");
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	display: inline-block; 

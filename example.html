@@ -1,0 +1,26 @@
+<html>
+     <head>
+         <title>WMD Example using jQuery</title>
+         <link rel="stylesheet" type="text/css" href="wmd.css"/>
+			<style type="text/css" media="screen">
+				body {
+					font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+					background: #ddd;
+				}
+			</style>
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+         <script type="text/javascript" src="jquery.wmd.min.js"></script>
+     </head>
+     <body>
+         <h1>WMD Example using jQuery</h1>
+         <div>
+             <textarea class="wmd-input"></textarea>
+         </div>
+ 
+         <script type="text/javascript">
+             $(function() {
+                $(".wmd-input").wmd();
+             });
+         </script>
+     </body>
+ </html>
