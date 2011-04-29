@@ -23,7 +23,7 @@ Example using wmd with jQuery:
         <body>
             <h1>WMD Example using jQuery</h1>
             <div>
-                <textarea id="notes"/>
+                <textarea id="notes"></textarea>
             </div>
     
             <script type="text/javascript">
