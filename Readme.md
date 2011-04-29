@@ -23,12 +23,12 @@ Example using wmd with jQuery:
         <body>
             <h1>WMD Example using jQuery</h1>
             <div>
-                <textarea id="notes"></textarea>
+                <textarea class="wmd-input"></textarea>
             </div>
     
             <script type="text/javascript">
                 $(function() {
-                   $("#notes").wmd(); 
+                   $(".wmd-input").wmd(); 
                 });
             </script>
         </body>
