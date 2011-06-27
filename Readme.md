@@ -38,5 +38,3 @@ License
 -------
 
 WMD Editor is licensed under [MIT License](http://github.com/openlibrary/wmd/raw/master/License.txt).
-
-

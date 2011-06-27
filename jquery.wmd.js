@@ -43,7 +43,11 @@
     };
 })(jQuery);
 ;(function() {
-    
+
+
+var ieRetardedClick;
+var ieCachedRange;
+
 WMDEditor = function(options) {
     this.options = WMDEditor.util.extend({}, WMDEditor.defaults, options || {});
     wmdBase(this, this.options);
@@ -559,9 +563,9 @@ var TextareaState = function(textarea){ // {{{
             // clicked.  On IE we cache the selection and set a flag
             // which we check for here.
             var range;
-            if(wmd.ieRetardedClick && wmd.ieCachedRange) {
-                range = wmd.ieCachedRange;
-                wmd.ieRetardedClick = false;
+            if(ieRetardedClick && ieCachedRange) {
+                range = ieCachedRange;
+                ieRetardedClick = false;
             }
             else {
                 range = doc.selection.createRange();
@@ -1322,7 +1326,6 @@ function get_browser() {
 var browser = get_browser();
 
 var wmdBase = function(wmd, wmd_options){ // {{{
-
     // Some namespaces.
     //wmd.Util = {};
     //wmd.Position = {};
@@ -1348,9 +1351,9 @@ var wmdBase = function(wmd, wmd_options){ // {{{
     // This ONLY affects Internet Explorer (tested on versions 6, 7
     // and 8) and ONLY on button clicks.  Keyboard shortcuts work
     // normally since the focus never leaves the textarea.
-    wmd.ieCachedRange = null;        // cached textarea selection
-    wmd.ieRetardedClick = false;    // flag
-    
+    ieCachedRange = null;        // cached textarea selection
+    ieRetardedClick = false;    // flag
+	
     // I think my understanding of how the buttons and callbacks are stored in the array is incomplete.
     wmd.editor = function(previewRefreshCallback){ // {{{
     
@@ -1464,8 +1467,8 @@ var wmdBase = function(wmd, wmd_options){ // {{{
                 // on mousedown.
                 if(browser.isIE) {
                     button.onmousedown =  function() { 
-                        wmd.ieRetardedClick = true;
-                        wmd.ieCachedRange = document.selection.createRange(); 
+                        ieRetardedClick = true;
+                        ieCachedRange = document.selection.createRange();
                     };
                 }
                 
