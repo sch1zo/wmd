@@ -4,8 +4,8 @@ WMD: The WYSIWYM Markdown Editor
 Introduction
 ------------
 
-This is a fork from the wmd branch for [Open Library](https://github.com/openlibrary/wmd), which is forked from the [Stackoverflow branch of wmd](http://github.com/derobins/wmd).
-I forked it and added some of the Pull Requests [Nonpython](https://github.com/Nonpython) created for the Stackoverflow branch. It's a jQuery plugin and is very easy to implement.
+another fork of wmd. see the fork queue to see where it came from.
+It's a jQuery plugin and is very easy to implement.
 
 How to use
 ----------
@@ -33,6 +33,16 @@ Example using wmd with jQuery:
             </script>
         </body>
     </html>
+
+Fork Quere
+---
+
+- [RobinBrouwer](https://github.com/RobinBrouwer/wmd)
+  - Pull Requests from [Nonpython](https://github.com/Nonpython)
+- [Open Library](https://github.com/openlibrary/wmd)
+- [Stackoverflow branch of wmd](http://github.com/derobins/wmd)
+
+
 
 License
 -------
