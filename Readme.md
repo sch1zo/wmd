@@ -34,7 +34,7 @@ Example using wmd with jQuery:
         </body>
     </html>
 
-Fork Quere
+Fork Queue
 ---
 
 - [RobinBrouwer](https://github.com/RobinBrouwer/wmd)
